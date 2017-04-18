@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/mafintosh/pump"
-
-    >pump (v1.0.2)</a>
+    <a href="https://github.com/mafintosh/pump">pump (v1.0.2)</a>
 </h1>
 <h4>pipe streams together and close all of them if one of them closes</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.pump">module pump</a><ol>
 
@@ -109,15 +102,15 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">pump = function () {
   var streams = Array.prototype.slice.call(arguments)
-  var callback = isFn(streams[streams.length - 1] || noop) &#x26;&#x26; streams.pop() || noop
+  var callback = isFn(streams[streams.length - 1] || noop) &amp;&amp; streams.pop() || noop
 
   if (Array.isArray(streams[0])) streams = streams[0]
-  if (streams.length &#x3c; 2) throw new Error(&#x27;pump requires two streams per minimum&#x27;)
+  if (streams.length &lt; 2) throw new Error('pump requires two streams per minimum')
 
   var error
   var destroys = streams.map(function (stream, i) {
-    var reading = i &#x3c; streams.length - 1
-    var writing = i &#x3e; 0
+    var reading = i &lt; streams.length - 1
+    var writing = i &gt; 0
     return destroyer(stream, reading, writing, function (err) {
       if (!error) error = err
       if (err) destroys.forEach(call)
@@ -149,10 +142,10 @@
 }
 
 var toHex = function () {
-  var reverse = new (require(&#x27;stream&#x27;).Transform)()
+  var reverse = new (require('stream').Transform)()
 
   reverse._transform = function (chunk, enc, callback) {
-    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;))
+    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>('hex'))
     callback()
   }
 
@@ -183,10 +176,10 @@ var wsClosed = false
 }
 
 var toHex = function () {
-  var reverse = new (require(&#x27;stream&#x27;).Transform)()
+  var reverse = new (require('stream').Transform)()
 
   reverse._transform = function (chunk, enc, callback) {
-    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;))
+    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>('hex'))
     callback()
   }
 
@@ -206,3 +199,4 @@ var wsClosed = false
     ]
 </div>
 </div>
+</body></html>

@@ -61,12 +61,142 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.pump">module pump</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pump.pump">
+            function <span class="apidocSignatureSpan"></span>pump
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pump.toString">
+            function <span class="apidocSignatureSpan">pump.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pump.toString">module pump.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pump.toString.toString">
+            function <span class="apidocSignatureSpan">pump.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pump" id="apidoc.module.pump">module pump</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pump.pump" id="apidoc.element.pump.pump">
+        function <span class="apidocSignatureSpan"></span>pump
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pump = function () {
+  var streams = Array.prototype.slice.call(arguments)
+  var callback = isFn(streams[streams.length - 1] || noop) &#x26;&#x26; streams.pop() || noop
+
+  if (Array.isArray(streams[0])) streams = streams[0]
+  if (streams.length &#x3c; 2) throw new Error(&#x27;pump requires two streams per minimum&#x27;)
+
+  var error
+  var destroys = streams.map(function (stream, i) {
+    var reading = i &#x3c; streams.length - 1
+    var writing = i &#x3e; 0
+    return destroyer(stream, reading, writing, function (err) {
+      if (!error) error = err
+      if (err) destroys.forEach(call)
+      if (reading) return
+      destroys.forEach(call)
+      callback(error)
+    })
+  })
+
+  return streams.reduce(pipe)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pump.toString" id="apidoc.element.pump.toString">
+        function <span class="apidocSignatureSpan">pump.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }, 100)
+}
+
+var toHex = function () {
+  var reverse = new (require(&#x27;stream&#x27;).Transform)()
+
+  reverse._transform = function (chunk, enc, callback) {
+    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;))
+    callback()
+  }
+
+  return reverse
+}
+
+var wsClosed = false
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pump.toString" id="apidoc.module.pump.toString">module pump.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pump.toString.toString" id="apidoc.element.pump.toString.toString">
+        function <span class="apidocSignatureSpan">pump.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }, 100)
+}
+
+var toHex = function () {
+  var reverse = new (require(&#x27;stream&#x27;).Transform)()
+
+  reverse._transform = function (chunk, enc, callback) {
+    reverse.push(chunk.<span class="apidocCodeKeywordSpan">toString</span>(&#x27;hex&#x27;))
+    callback()
+  }
+
+  return reverse
+}
+
+var wsClosed = false
+...</pre></li>
+    </ul>
+
 
 </div>
 
