@@ -1,9 +1,14 @@
-# api documentation for  [pump (v1.0.2)](https://github.com/mafintosh/pump)  [![npm package](https://img.shields.io/npm/v/npmdoc-pump.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pump) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pump.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pump)
+# npmdoc-pump
+
+#### api documentation for  [pump (v1.0.2)](https://github.com/mafintosh/pump)  [![npm package](https://img.shields.io/npm/v/npmdoc-pump.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pump) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pump.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pump)
+
 #### pipe streams together and close all of them if one of them closes
 
-[![NPM](https://nodei.co/npm/pump.png?downloads=true)](https://www.npmjs.com/package/pump)
+[![NPM](https://nodei.co/npm/pump.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/pump)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-pump/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-pump_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-pump/build..beta..travis-ci.org/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-pump/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-pump/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-pump/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-pump/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-pump/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Mathias Buus Madsen",
-        "email": "mathiasbuus@gmail.com"
+        "name": "Mathias Buus Madsen"
     },
     "browser": {
         "fs": false
@@ -48,13 +52,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "mafintosh",
-            "email": "mathiasbuus@gmail.com"
+            "name": "mafintosh"
         }
     ],
     "name": "pump",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/mafintosh/pump.git"
@@ -65,16 +67,6 @@
     "version": "1.0.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module pump](#apidoc.module.pump)
-
-
-
-# <a name="apidoc.module.pump"></a>[module pump](#apidoc.module.pump)
 
 
 
