@@ -1,6 +1,6 @@
 # npmdoc-pump
 
-#### api documentation for  [pump (v1.0.2)](https://github.com/mafintosh/pump)  [![npm package](https://img.shields.io/npm/v/npmdoc-pump.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pump) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pump.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pump)
+#### basic api documentation for  [pump (v1.0.2)](https://github.com/mafintosh/pump)  [![npm package](https://img.shields.io/npm/v/npmdoc-pump.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-pump) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-pump.svg)](https://travis-ci.org/npmdoc/node-npmdoc-pump)
 
 #### pipe streams together and close all of them if one of them closes
 
@@ -64,7 +64,8 @@
     "scripts": {
         "test": "node test.js"
     },
-    "version": "1.0.2"
+    "version": "1.0.2",
+    "bin": {}
 }
 ```
 
